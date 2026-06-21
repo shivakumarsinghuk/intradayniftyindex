@@ -7,7 +7,7 @@ from user_interface.adapter import *
 from broker_platform.pal.utility_manager import *
 from datatypes.option_straddle_types import *
 from utility.quotes_utility import *
-from business_logic.orb_nifty_index import *
+from business_logic.orb_nifty_index.orb_nifty_index import *
 from utility.utility import *
 from utility.nse_utility import *
 
