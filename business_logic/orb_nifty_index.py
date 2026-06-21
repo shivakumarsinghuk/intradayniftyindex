@@ -7,6 +7,7 @@ from enum import Enum
 import traceback
 
 from utility.quotes_utility import *
+from utility.nse_utility import *
 from utility.utility import *
 from user_interface.adapter.config import *
 from user_interface.adapter.trade_day_data import *
@@ -203,7 +204,7 @@ class LogicORBNiftyIndex:
         return candle_data
 
     def __get_prev_day_candle_data(self, ticker):
-        prev_trade_day = nse_utitlity.get_prev_day_trade_date(self.day_preset)
+        prev_trade_day = self.nse_utility.get_prev_day_trade_date(self.day_preset)
         str_date = datetime.strptime(prev_trade_day, "%Y-%m-%d")
         print("str_date: ", str_date, type(str_date))
         str_from_date, str_to_date = self.option_chain_utility.get_broker_utility().getTimeFrame(str_start_time="09:15:00",

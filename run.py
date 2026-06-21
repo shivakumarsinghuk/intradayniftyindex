@@ -4,11 +4,12 @@ run.py
 
 import argparse
 from user_interface.adapter import *
-from pal.utility_manager import *
+from broker_platform.pal.utility_manager import *
 from datatypes.option_straddle_types import *
 from utility.quotes_utility import *
 from business_logic.orb_nifty_index import *
 from utility.utility import *
+from utility.nse_utility import *
 
 def validate_arguments(args=None):
     parser = argparse.ArgumentParser(description="Demo script with named args")
@@ -23,7 +24,7 @@ if __name__ == "__main__":
 
     args = validate_arguments()
     #construct nse utility
-    obj_nse_utility = nse_utitlity()
+    obj_nse_utility = nse_utility()
 
     #create gsheet user login  object
     obj_adapter_login = UserInterfaceAdapterLogin(args)
@@ -31,7 +32,7 @@ if __name__ == "__main__":
     print(obj_adapter_login.get_data()[0])
 
 
-    obj_utility_manager = utility_manager(ui_adapter=obj_adapter_login, nse_utility=obj_nse_utility)
+    obj_utility_manager = utility_manager()
     obj_broker_utility = obj_utility_manager.get_utility_object(obj_adapter_login.get_data()[0])
     obj_option_chain_broker_utility = obj_utility_manager.get_utility_object(obj_adapter_login.get_data()[1])
     obj_adapter_trade_day_data = UserInterfaceAdapterTradeDayData(args)

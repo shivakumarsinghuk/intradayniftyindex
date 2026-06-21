@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # -*- coding: utf-8 -*-
 
-from utility import *
 import datetime as dt
 import pandas_market_calendars as mcal
 from selenium import webdriver
@@ -9,12 +8,12 @@ from selenium.webdriver.common.by import By
 import traceback
 import time
 from datetime import timedelta
-
+from utility.utility import *
 
 dict_option_name_to_index = {"NIFTY":"NIFTY50", "BANKNIFTY":"NIFTYBANK"}
 dict_fno_lot_size = {"NIFTY50":75, "NIFTY":75, "NIFTYBANK":35}
 
-class nse_utitlity:
+class nse_utility:
     def __init__(self):
         #self.dict_lot_size = nse_get_fno_lot_sizes()
         self.dict_monthly_expiry_date = {}
