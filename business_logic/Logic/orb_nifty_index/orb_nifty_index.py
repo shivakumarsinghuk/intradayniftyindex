@@ -6,9 +6,9 @@ Zerodha Kite Connect - Historical Data
 from enum import Enum
 import traceback
 
-from utility.quotes_utility import *
-from utility.nse_utility import *
-from utility.utility import *
+from Utility.quotes_utility import *
+from Utility.nse_utility import *
+from Utility.utility import *
 from user_interface.adapter.config import *
 from user_interface.adapter.trade_day_data import *
 from user_interface.adapter.cockpit import *

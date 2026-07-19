@@ -8,7 +8,7 @@ sys.path.append('../interfaces')   # path to directory containing helper.py
 
 from interfaces.Iuser_Interface import *
 from datatypes.config import *
-from utility.gsheet_utility import *
+from Utility.gsheet_utility import *
 
 LOGIC_CANDLE_INTERVAL = 0
 LOGIC_START_TIME = 1

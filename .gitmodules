@@ -1,3 +1,6 @@
 [submodule "broker_platform"]
 	path = broker_platform
 	url = https://github.com/shivakumarsinghuk/BrokerUtility.git
+[submodule "Utility"]
+	path = Utility
+	url = https://github.com/shivakumarsinghuk/Utility.git

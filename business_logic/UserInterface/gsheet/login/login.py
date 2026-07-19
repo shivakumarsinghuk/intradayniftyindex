@@ -6,7 +6,7 @@ import sys
 sys.path.append('../interfaces')   # path to directory containing helper.py
 
 from interfaces.Iuser_Interface import *
-from utility.gsheet_utility import *
+from Utility.gsheet_utility import *
 from broker_platform.datatypes.login_types import *
 
 BROKER_DATA_INDEX = 0

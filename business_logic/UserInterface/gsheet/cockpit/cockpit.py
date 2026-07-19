@@ -7,9 +7,9 @@ import numpy as np
 sys.path.append('../interfaces')   # path to directory containing helper.py
 
 from interfaces.Iuser_Interface import *
-from utility.gsheet_utility import *
+from Utility.gsheet_utility import *
 #from broker_platform.datatypes.trade_data import *
-from utility.utility import *
+from Utility.utility import *
 
 INDEX_DATA_INDEX = 0
 BUY_TOTAL_PRICE_INDEX = 1
